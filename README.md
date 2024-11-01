@@ -17,9 +17,11 @@ We use the following formula for calculating avg carbon intensity:
 ![Carbon Intensity Formula](image/Carbon%20Intensity%20Formula.png)
  , where
 
-CIavg = Average carbon intensity (real-time or forecast) of a region
-Ei = Electricity produced by source i.
+CIavg = Average carbon intensity (real-time or forecast) of a region  
+Ei = Electricity produced by source i.  
 CEFi = Carbon emission factor (lifecycle/direct) of source i.
+
+
 
 ### 3.2 Usage  
 The carbonEmissionCalculator.py file provides data loading, cleaning and calculation functions for calculating total carbon emissions from different energy combinations.  
