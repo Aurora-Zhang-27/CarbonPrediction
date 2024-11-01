@@ -49,7 +49,7 @@ From the example, the inputed data should be - [Energy data(CAISO 5 minute stand
 You can directly download the data using the link before. No need to modify the contents of the document.  
 After getting the output, input it to the - [CarbonPrediction](src/CarbonPrediction.py) to get the result and the image of the prediction line.
 
-# 5 Running CarbonPrediction from scratch
+# 5. Running CarbonPrediction from scratch
 To run CarbonPrediction from scratch (with new data/for new regions etc.), first install the dependencies mentioned in Section 4.1.  
 ### 5.1 Getting weather/energy data     
 You can download any weather data you want from the Internet. Then, make sure that the interval between each row of data is one hour. Similarly, Repeat the above for your own energy data. 
@@ -58,6 +58,8 @@ After having two data files, make sure that they are csv files and each column c
 ### 5.3 Getting carbon emission forecasts using CarbonPrediction  
 Input the new csv file which outputed from the - [Carbon_Emission_Calculator_2.py](src/Carbon_Emission_Calculator_2.py) by changing file path in line14, and input your own weather data by changing the path in line 10.  
 If you need data which is more than 24 hours, you can change the sequence_length in ine 42. Note that the larger the sequence_length, the lower the precision rate afterward.
+
+# 6. Acknowledgements
 
 
 
