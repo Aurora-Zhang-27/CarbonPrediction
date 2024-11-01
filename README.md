@@ -43,3 +43,6 @@ Other required packages:
 - Required python modules are listed in `requirements.txt`.  
   Run `pip install -U -r requirements.txt` for installing the dependencies.
 
+### 4.2 Running CarbonPrediction using saved data:
+The saved data needs to be inputed into the 
+
