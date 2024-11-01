@@ -32,7 +32,7 @@ Finally, apply Unit Conversion Formula to get the accurate data with correct uni
 
 
 ### 3.2 Usage  
-The carbonEmissionCalculator.py file provides data loading, cleaning and calculation functions for calculating total carbon emissions from different energy combinations.  
+The [Carbon_Emission_Calculator_2.py](src/Carbon_Emission_Calculator_2.py) program provides data loading, cleaning and calculation functions for calculating total carbon emissions from different energy combinations.  
 
 ## 4. Run Carbon Emission Calculator and Main code with existing datasets and models
 ### 4.1 Installing dependencies
