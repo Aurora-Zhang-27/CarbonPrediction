@@ -35,9 +35,11 @@ Finally, apply Unit Conversion Formula to get the accurate data with correct uni
 The carbonEmissionCalculator.py file provides data loading, cleaning and calculation functions for calculating total carbon emissions from different energy combinations.  
 
 # 4. Run Carbon Emission Calculator and Main code with existing datasets and models
-### 4.1 Installing dependencies  
+### 4.1 Installing dependencies
+
 Carbon Emission Calculator requires Python3.  
 Other required packages:
 
-Required python modules are listed in requirements.txt.
-Run pip3 install -U -r requirements.txt for installing the dependecies.
+- Required python modules are listed in `requirements.txt`.  
+  Run `pip install -U -r requirements.txt` for installing the dependencies.
+
