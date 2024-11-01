@@ -21,9 +21,10 @@ CIavg = Average carbon intensity (real-time or forecast) of a region
 Ei = Electricity produced by source i.  
 CEFi = Carbon emission factor (lifecycle/direct) of source i.
 
-Then，we use Carbon Emission Formula:
+Then，we use Carbon Emission Formula for calculating carbon emission coresponding to energy data:
 ![Carbon Emission Formula](image/Carbon%20Emission%20Formula.png)  
-Finally, apply Unit Conversion Formula:
+
+Finally, apply Unit Conversion Formula to get the accurate data with correct unit:
 ![Unit Conversion Formula](image/Unit%20Conversion%20Formula.png)  
 
 
