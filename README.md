@@ -14,7 +14,7 @@ CA(US) region
 This code provides a flow of calculations from energy carbon intensity to carbon emissions. It first calculates the carbon intensity per hour based on the carbon emission factors and contribution ratios of each energy source, and then converts it to carbon emissions.
 
 We use the following formula for calculating avg carbon intensity:
-![图片描述](相对路径/图片名称.png)
+![图片描述](Carbon Intensity Formula.png）
  , where
 
 CIavg = Average carbon intensity (real-time or forecast) of a region
