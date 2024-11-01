@@ -44,5 +44,6 @@ Other required packages:
   Run `pip install -U -r requirements.txt` for installing the dependencies.
 
 ### 4.2 Running CarbonPrediction using saved data:
-The saved data needs to be inputed into the 
+The saved data needs to be inputed into the - [Carbon_Emission_Calculator_2.py](./Carbon_Emission_Calculator_2.py).  
+From the example, 
 
