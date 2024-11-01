@@ -36,4 +36,8 @@ The carbonEmissionCalculator.py file provides data loading, cleaning and calcula
 
 # 4. Run Carbon Emission Calculator and Main code with existing datasets and models
 ### 4.1 Installing dependencies  
-Carbon Emission Calculator requires Python3.
+Carbon Emission Calculator requires Python3.  
+Other required packages:
+
+Required python modules are listed in requirements.txt.
+Run pip3 install -U -r requirements.txt for installing the dependecies.
