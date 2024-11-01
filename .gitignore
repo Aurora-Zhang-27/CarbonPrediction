@@ -160,3 +160,18 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+# Data files
+*.csv           # Ignore all CSV data files
+*.xlsx          # Ignore Excel data files
+
+# Image files
+*.png           # Ignore generated image files
+*.jpg
+*.jpeg
+
+# Model files
+*.h5            # TensorFlow Keras model files
+*.ckpt          # Checkpoint files (used for saving training progress)
+
+# Output files
+*.log           # Ignore log files
