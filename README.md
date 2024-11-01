@@ -59,7 +59,8 @@ After having two data files, make sure that they are csv files and each column c
 Input the new csv file which outputed from the - [Carbon_Emission_Calculator_2.py](src/Carbon_Emission_Calculator_2.py) to [CarbonPrediction](src/CarbonPrediction.py) by changing file path in line14, and input your own weather data by changing the path in line 10.  
 If you need data which is more than 24 hours, you can change the sequence_length in ine 42. Note that the larger the sequence_length, the lower the precision rate afterward.
 
-## 6. Acknowledgements
+## 6. Citing CarbonPrediction
+## 7. Acknowledgements
 
 
 
