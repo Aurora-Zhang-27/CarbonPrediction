@@ -23,8 +23,8 @@ CEFi = Carbon emission factor (lifecycle/direct) of source i.
 
 Then，we use Carbon Emission Formula:
 ![Carbon Emission Formula](image/Carbon%20Emission%20Formula.png)  
-Finally, apply 
-
+Finally, apply Unit Conversion Formula:
+![Unit Conversion Formula](image/Unit%20Conversion%20Formula.png)  
 
 
 ### 3.2 Usage  
