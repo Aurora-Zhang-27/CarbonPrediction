@@ -33,7 +33,7 @@ Finally, apply Unit Conversion Formula to get the accurate data with correct uni
 
 ### 3.2 Usage  
 The [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) program provides data loading, cleaning and calculation functions for calculating total carbon emissions from different energy combinations.  
-The [CarbonPrediction](src/CarbonPrediction.py) program use Long Short-Term Memory (LSTM) model system, which is capable of accurately predicting hourly carbon emissions for the next 24 hours.
+The [CarbonPrediction](src/CarbonPrediction.py) program use combines LSTM, GRU and CNN network architectures for time series prediction tasks based on historical carbon emissions and weather data. By predicting carbon emissions for the next 24 hours, the code supports real-time monitoring and forecasting of regional carbon emissions.
 
 ## 4. Run Carbon Emission Calculator and Main code with existing datasets and models
 ### 4.1 Installing dependencies
