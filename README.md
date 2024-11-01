@@ -56,7 +56,7 @@ You can download any weather data you want from the Internet. Then, make sure th
 ### 5.2 Calculating Carbon Emission corresopnding to energy data    
 After having two data files, make sure that they are csv files and each column corresponds to a different energy and weather type. Next, open - [Carbon_Emission_Calculator_2.py](src/Carbon_Emission_Calculator_2.py) and change the path of the code at line92 to match the path of your energy data file. Importantly, make sure that all of the files have to be in one floder. 
 ### 5.3 Getting carbon emission forecasts using CarbonPrediction  
-Input the new csv file which outputed from the - [Carbon_Emission_Calculator_2.py](src/Carbon_Emission_Calculator_2.py) by changing file path in line14, and input your own weather data by changing the path in line 10.  
+Input the new csv file which outputed from the - [Carbon_Emission_Calculator_2.py](src/Carbon_Emission_Calculator_2.py) to [CarbonPrediction](src/CarbonPrediction.py) by changing file path in line14, and input your own weather data by changing the path in line 10.  
 If you need data which is more than 24 hours, you can change the sequence_length in ine 42. Note that the larger the sequence_length, the lower the precision rate afterward.
 
 ## 6. Acknowledgements
