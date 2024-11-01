@@ -13,7 +13,7 @@ CA(US) region
 ### 3.1 Carbon Intensity and Carbon Emissions  
 This code provides a flow of calculations from energy carbon intensity to carbon emissions. It first calculates the carbon intensity per hour based on the carbon emission factors and contribution ratios of each energy source, and then converts it to carbon emissions.
 
-We use the following formula for calculating avg carbon intensity:
+First, we use the following formula for calculating avg carbon intensity:
 ![Carbon Intensity Formula](image/Carbon%20Intensity%20Formula.png)
  , where
 
