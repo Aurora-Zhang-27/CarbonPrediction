@@ -45,5 +45,5 @@ Other required packages:
 
 ### 4.2 Running CarbonPrediction using saved data:
 The saved data needs to be inputed into the - [Carbon_Emission_Calculator_2.py](./Carbon_Emission_Calculator_2.py).  
-From the example, 
+From the example, the inputed data should be -[Energy data](data/CAISO 5 minute standardized data_2024-07-15T00_00_00-07_00_2024-07-29T23_59_59.999000-07_00.csv)
 
