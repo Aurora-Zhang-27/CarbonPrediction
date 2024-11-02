@@ -14,7 +14,7 @@ Current example:
 CA(US) region  
  Energy data collected from [gridstatus](https://www.gridstatus.io/graph/fuel-mix?iso=caiso&date=2024-07-15to2024-07-29](https://www.gridstatus.io/graph/fuel-mix?iso=caiso&date=2024-07-15to2024-07-29)) Weather data collected from [VisualCrossing](https://www.visualcrossing.com/weather/weather-data-services)   
 PJM(US) region  
- Energy data collected from [gridstatus](https://www.gridstatus.io/graph/fuel-mix?iso=pjm&date=2023-10-31to2024-10-31) Weather data collected from [VisualCrossing](https://www.visualcrossing.com/weather/weather-data-services/new%20york/metric/2023-11-01/2024-10-31) Carbon Emission Data collected from [PJM]
+ Energy data collected from [gridstatus](https://www.gridstatus.io/graph/fuel-mix?iso=pjm&date=2023-10-31to2024-10-31) Weather data collected from [VisualCrossing](https://www.visualcrossing.com/weather/weather-data-services/new%20york/metric/2023-11-01/2024-10-31) Carbon Emission Data collected from [PJM](https://dataminer2.pjm.com/feed/hourly_emission_rates.)
  
 ## 3. Background to the calculation of carbon emissions
 ### 3.1 Carbon Intensity and Carbon Emissions  
@@ -37,7 +37,8 @@ Finally, apply Unit Conversion Formula to get the accurate data with correct uni
 
 ### 3.2 Usage  
 The [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) program provides data loading, cleaning and calculation functions for calculating total carbon emissions from different energy combinations.  
-The [CarbonPrediction](src/CarbonPrediction%201.py) program use combines LSTM, GRU and CNN network architectures for time series prediction tasks based on historical carbon emissions and weather data. By predicting carbon emissions for the next 24 hours, the code supports real-time monitoring and forecasting of regional carbon emissions.
+The [CarbonPrediction](src/CarbonPrediction%201.py) program use combines LSTM, GRU and CNN network architectures for time series prediction tasks based on historical carbon emissions and weather data. By predicting carbon emissions for the next 24 hours, the code supports real-time monitoring and forecasting of regional carbon emissions.  
+The [Unit Conversion and Summation Calculator](src/Unit%20Conversion%20and%20Summation%20Calculator.py) program can change the historical carbon emission data from [PJM](https://dataminer2.pjm.com/feed/hourly_emission_rates.) into correct form and unit.
 
 ## 4. Run Carbon Emission Calculator and Main code with existing datasets and models
 ### 4.1 Installing dependencies
