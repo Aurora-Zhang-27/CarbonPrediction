@@ -14,7 +14,7 @@ Current example:
 CA(US) region  
  Energy data collected from [gridstatus](https://www.gridstatus.io/graph/fuel-mix?iso=caiso&date=2024-07-15to2024-07-29](https://www.gridstatus.io/graph/fuel-mix?iso=caiso&date=2024-07-15to2024-07-29)) Weather data collected from [VisualCrossing](https://www.visualcrossing.com/weather/weather-data-services)   
 PJM(US) region  
- Energy data collected from [gridstatus](https://www.gridstatus.io/graph/fuel-mix?iso=pjm&date=2023-10-31to2024-10-31) Weather data collected from [VisualCrossing](https://www.visualcrossing.com/weather/weather-data-services/new%20york/metric/2023-11-01/2024-10-31) Carbon Emission Data collected from [PJM](https://dataminer2.pjm.com/feed/hourly_emission_rates.)
+ Energy data collected from [gridstatus](https://www.gridstatus.io/graph/fuel-mix?iso=pjm&date=2023-10-31to2024-10-31) Weather data collected from [VisualCrossing](https://www.visualcrossing.com/weather/weather-data-services/new%20york/metric/2023-11-01/2024-10-31) Carbon Emission Data collected from [PJM](https://www.pjm.com/)
  
 ## 3. Background to the calculation of carbon emissions
 ### 3.1 Carbon Intensity and Carbon Emissions  
