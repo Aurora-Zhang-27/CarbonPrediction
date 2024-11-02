@@ -62,7 +62,7 @@ After having two data files, make sure that they are csv files and each column c
 Input the new csv file which outputed from the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) to [CarbonPrediction](src/CarbonPrediction.py) by changing file path in line14, and input your own weather data by changing the path in line 10.  
 If you need data which is more than 24 hours, you can change the sequence_length in ine 42. Note that the larger the sequence_length, the lower the precision rate afterward.  
 ### 5.4 If you are able to collect the historical carbon emission data  
-No need to use the calculator.
+No need to use the calculator. Please Note that the interval between each row of data of carbon emission should be an hour as well. Then, since you don't have to use the calculator, you should use [CarbonPrediction 2]() to make prediction.
 
 ## 6. Citing CarbonPrediction
 ## 7. Acknowledgements
