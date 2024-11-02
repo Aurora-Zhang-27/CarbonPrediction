@@ -49,12 +49,14 @@ Other required packages:
   Run `pip install -U -r requirements.txt` for installing the dependencies.
 
 ### 4.2 Running CarbonPrediction 1 using saved data:
-The saved data needs to be inputed into the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py).  
+The saved data in [CA(US)](data/CA(US)) needs to be inputed into the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py).  
 From the example, the inputed data should be [Energy data](data/CAISO%205%20minute%20standardized%20data_2024-07-15T00_00_00-07_00_2024-07-29T23_59_59.999000-07_00.csv), and the outputed data should be [Energy + Emission combined data](data/combined_energy_data_with_emission_2.csv).  
 You can directly download the data using the link before. No need to modify the contents of the document.  
 After getting the output, input it to the [CarbonPrediction](src/CarbonPrediction%201.py) to get the result and the image of the prediction line.
 
-### 4.3 Running CarbonPrediction 2 using saved data:
+### 4.3 Running CarbonPrediction 2 using saved data:  
+The saved data in [PJM(US)](data/PJM(US)) which are [Energy data](data/PJM(US)/PJM%205%20minute%20standardized%20data_2024-09-30T00_00_00-04_00_2024-10-30T23_59_59.999000-04_00.csv), [Weather data](data/PJM(US)/new%20york%202024-09-30%20to%202024-10-30.csv), [Processed historical carbon emissions data](data/PJM(US)/new_hourly_total_emissions.csv) needs to be inputed into the [CarbonPrediction 2](src/CarbonPrediction%202.py) directly, and you can have the result.  
+Note that if you want to use the [Unprocessed historical carbon emissions data](data/PJM(US)/hourly_emission_rates.csv) you should first input it into [Unit Conversion and Summation Calculator](src/Unit%20Conversion%20and%20Summation%20Calculator.py) which you can change the data into correct form and unit. Then, repeat the above.
 
 ## 5. Running CarbonPrediction from scratch
 To run CarbonPrediction from scratch (with new data/for new regions etc.), first install the dependencies mentioned in Section 4.1.  
