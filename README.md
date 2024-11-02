@@ -6,7 +6,9 @@ Authors: Yin Zhang
 
 ## 1. Regions covered  
 If energy and weather data could be collected for a specific area, this program could theoretically predict any area.   
-Currently, California and Pennsylvania can be referenced as an example at present.
+Current example:  
+1.California: CA(US)   
+2.Delaware, Illinois, Indiana, Kentucky, Maryland, Michigan, New Jersey, North Carolina, Ohio, Pennsylvania, Tennessee, Virginia, West Virginia and the District of Columbia: PJM(US)
 
 ## 2. Data Sources
 CA(US) region  
