@@ -40,7 +40,7 @@ The [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) program pr
 The [CarbonPrediction](src/CarbonPrediction%201.py) program use combines LSTM, GRU and CNN network architectures for time series prediction tasks based on historical carbon emissions and weather data. By predicting carbon emissions for the next 24 hours, the code supports real-time monitoring and forecasting of regional carbon emissions.  
 The [Unit Conversion and Summation Calculator](src/Unit%20Conversion%20and%20Summation%20Calculator.py) program can change the historical carbon emission data from [PJM](https://dataminer2.pjm.com/feed/hourly_emission_rates.) into correct form and unit.
 
-## 4. Run Carbon Emission Calculator and Main code with existing datasets and models
+## 4. Run Carbon Emission Calculator and CarbonPrediction with existing datasets and models
 ### 4.1 Installing dependencies
 
 Carbon Emission Calculator requires Python3.  
