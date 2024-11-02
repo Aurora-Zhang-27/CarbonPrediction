@@ -35,7 +35,7 @@ Finally, apply Unit Conversion Formula to get the accurate data with correct uni
 
 ### 3.2 Usage  
 The [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) program provides data loading, cleaning and calculation functions for calculating total carbon emissions from different energy combinations.  
-The [CarbonPrediction](src/CarbonPrediction.py) program use combines LSTM, GRU and CNN network architectures for time series prediction tasks based on historical carbon emissions and weather data. By predicting carbon emissions for the next 24 hours, the code supports real-time monitoring and forecasting of regional carbon emissions.
+The [CarbonPrediction](src/CarbonPrediction%201.py) program use combines LSTM, GRU and CNN network architectures for time series prediction tasks based on historical carbon emissions and weather data. By predicting carbon emissions for the next 24 hours, the code supports real-time monitoring and forecasting of regional carbon emissions.
 
 ## 4. Run Carbon Emission Calculator and Main code with existing datasets and models
 ### 4.1 Installing dependencies
@@ -50,7 +50,7 @@ Other required packages:
 The saved data needs to be inputed into the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py).  
 From the example, the inputed data should be [Energy data](data/CAISO%205%20minute%20standardized%20data_2024-07-15T00_00_00-07_00_2024-07-29T23_59_59.999000-07_00.csv), and the outputed data should be [Energy + Emission combined data](data/combined_energy_data_with_emission_2.csv).  
 You can directly download the data using the link before. No need to modify the contents of the document.  
-After getting the output, input it to the [CarbonPrediction](src/CarbonPrediction.py) to get the result and the image of the prediction line.
+After getting the output, input it to the [CarbonPrediction](src/CarbonPrediction%201.py) to get the result and the image of the prediction line.
 
 ## 5. Running CarbonPrediction from scratch
 To run CarbonPrediction from scratch (with new data/for new regions etc.), first install the dependencies mentioned in Section 4.1.  
@@ -59,10 +59,13 @@ You can download any weather data you want from the Internet. Then, make sure th
 ### 5.2 Calculating Carbon Emission corresopnding to energy data    
 After having two data files, make sure that they are csv files and each column corresponds to a different energy and weather type. Next, open [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) and change the path of the code at line92 to match the path of your energy data file. Note that, you should make sure that all of the files have to be in one floder. 
 ### 5.3 Getting carbon emission forecasts using CarbonPrediction  
-Input the new csv file which outputed from the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) to [CarbonPrediction](src/CarbonPrediction.py) by changing file path in line14, and input your own weather data by changing the path in line 10.  
+Input the new csv file which outputed from the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) to [CarbonPrediction](src/CarbonPrediction%201.py) by changing file path in line14, and input your own weather data by changing the path in line 10.  
 If you need data which is more than 24 hours, you can change the sequence_length in ine 42. Note that the larger the sequence_length, the lower the precision rate afterward.  
 ### 5.4 If you are able to collect the historical carbon emission data  
-No need to use the calculator. Please Note that the interval between each row of data of carbon emission should be an hour as well. Then, since you don't have to use the calculator, you should use [CarbonPrediction 2]() to make prediction.
+No need to use the calculator. Please Note that the interval between each row of data of carbon emission should be an hour as well. Then, since you don't have to use the calculator, you should use [CarbonPrediction 2](src/CarbonPrediction%202.py) to make prediction.  
+In the code, you should replace the file paths at line9 to line11. Also, you may have to change the datatime name to your own datatime name of your files in line18 to line20. 
+### Caveat：  
+If your data has different types of energy carbon emissions at one point in time like [](), and you need to sum them before you can continue, xxx this program can help you.
 
 ## 6. Citing CarbonPrediction
 ## 7. Acknowledgements
