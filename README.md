@@ -71,8 +71,8 @@ If you need data which is more than 24 hours, you can change the sequence_length
 ### 5.4 If you are able to collect the historical carbon emission data  
 No need to use the calculator. Please Note that the interval between each row of data of carbon emission should be an hour as well. Then, since you don't have to use the calculator, you should use [CarbonPrediction 2](src/CarbonPrediction%202.py) to make prediction.  
 In the code, you should replace the file paths at line9 to line11. Also, you may have to change the datatime name to your own datatime name of your files in line18 to line20. 
-### Caveat：  
-If your data has different types of energy carbon emissions at one point in time like [hourly_emission_rates.csv](data/PJM(US)/hourly_emission_rates.csv), and you need to sum them before you can continue, [Unit Conversion and Summation Calculator](src/Unit%20Conversion%20and%20Summation%20Calculator.py) can help you. Replace your file name on line4 and it will automatically generate a file called `new_hourly_total_emissions.csv` in the folder where the file is located. This is your available carbon emissions data. Input it to [CarbonPrediction 2](src/CarbonPrediction%202.py) with your energy and weather data, you will get the result.
+### Note：  
+If your data comes from [PJM](https://dataminer2.pjm.com/feed/hourly_emission_rates.) or has different types of energy carbon emissions at one point in time like [hourly_emission_rates.csv](data/PJM(US)/hourly_emission_rates.csv), and you need to sum them before you can continue, [Unit Conversion and Summation Calculator](src/Unit%20Conversion%20and%20Summation%20Calculator.py) can help you. Replace your file name on line4 and it will automatically generate a file called `new_hourly_total_emissions.csv` in the folder where the file is located. This is your available carbon emissions data. Input it to [CarbonPrediction 2](src/CarbonPrediction%202.py) with your energy and weather data, you will get the result.
 
 ## 6. Citing CarbonPrediction
 ## 7. Acknowledgements
