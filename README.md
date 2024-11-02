@@ -65,7 +65,7 @@ If you need data which is more than 24 hours, you can change the sequence_length
 No need to use the calculator. Please Note that the interval between each row of data of carbon emission should be an hour as well. Then, since you don't have to use the calculator, you should use [CarbonPrediction 2](src/CarbonPrediction%202.py) to make prediction.  
 In the code, you should replace the file paths at line9 to line11. Also, you may have to change the datatime name to your own datatime name of your files in line18 to line20. 
 ### Caveat：  
-If your data has different types of energy carbon emissions at one point in time like [](), and you need to sum them before you can continue, xxx this program can help you.
+If your data has different types of energy carbon emissions at one point in time like [hourly_emission_rates.csv](data/PJM(US)/hourly_emission_rates.csv), and you need to sum them before you can continue, []() can help you.
 
 ## 6. Citing CarbonPrediction
 ## 7. Acknowledgements
