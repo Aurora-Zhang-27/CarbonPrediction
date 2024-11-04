@@ -21,9 +21,9 @@ energy_data['datetime'] = pd.to_datetime(energy_data['interval_start_utc']).dt.t
 weather_data['datetime'] = pd.to_datetime(weather_data['datetime']).dt.tz_localize(None)
 historical_emissions['datetime'] = pd.to_datetime(historical_emissions['datetime_utc']).dt.tz_localize(None)
 
-energy_data = pd.read_csv(energy_data_path)
-weather_data = pd.read_csv(weather_data_path)
-historical_emissions = pd.read_csv(historical_emissions_path)
+energy_data.set_index('datetime', inplace=True)
+weather_data.set_index('datetime', inplace=True)
+historical_emissions.set_index('datetime', inplace=True)
 
 # 3. Merge energy and weather data
 combined_data = pd.merge(energy_data, weather_data, left_index=True, right_index=True, how='inner')
