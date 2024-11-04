@@ -25,15 +25,6 @@ energy_data = pd.read_csv(energy_data_path)
 weather_data = pd.read_csv(weather_data_path)
 historical_emissions = pd.read_csv(historical_emissions_path)
 
-# 2. Preprocess data
-energy_data['datetime'] = pd.to_datetime(energy_data['interval_start_utc']).dt.tz_localize(None)
-weather_data['datetime'] = pd.to_datetime(weather_data['datetime']).dt.tz_localize(None)
-historical_emissions['datetime'] = pd.to_datetime(historical_emissions['datetime_utc']).dt.tz_localize(None)
-
-energy_data.set_index('datetime', inplace=True)
-weather_data.set_index('datetime', inplace=True)
-historical_emissions.set_index('datetime', inplace=True)
-
 # 3. Merge energy and weather data
 combined_data = pd.merge(energy_data, weather_data, left_index=True, right_index=True, how='inner')
 
@@ -122,22 +113,3 @@ plt.tight_layout()
 # Show the plot
 plt.show()
 
-# Output forecasted values to the console
-print("Forecasted values for the next 24 hours:")
-print(forecast_emission)
-
-# Load GroundTruth data for the next 24 hours
-groundtruth_path = '/Users/mac/Desktop/CAISO2/new_hourly_emission_rates_Nov_1st.csv'
-groundtruth_data = pd.read_csv(groundtruth_path)
-
-# Extract the actual values from the third column
-groundtruth_values = groundtruth_data.iloc[:, 2].values  # Third column as GroundTruth data
-
-# Compare GroundTruth values with predicted values
-mae = mean_absolute_error(groundtruth_values, forecast_emission[:len(groundtruth_values)])
-mse = mean_squared_error(groundtruth_values, forecast_emission[:len(groundtruth_values)])
-rmse = mean_squared_error(groundtruth_values, forecast_emission[:len(groundtruth_values)], squared=False)
-
-print(f"Mean Absolute Error (MAE): {mae}")
-print(f"Mean Squared Error (MSE): {mse}")
-print(f"Root Mean Squared Error (RMSE): {rmse}")
