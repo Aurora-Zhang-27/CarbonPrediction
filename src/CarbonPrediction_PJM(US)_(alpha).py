@@ -285,11 +285,7 @@ else:
         mae_h, mse_h = multi_res[h]
         print(f"Horizon={h} => MAE={mae_h:.2f}, MSE={mse_h:.2f}")
 
-print("Done!")
 
-
-
-'''
 # 可视化一小段
 plt.figure(figsize=(12,5))
 plt.plot(y_true_final[-200:], label='Actual', color='blue')
@@ -297,10 +293,8 @@ plt.plot(y_pred_final[-200:], label='Predicted', color='red')
 plt.title('Prediction vs Actual (last 200 points in test set)')
 plt.legend()
 plt.show()
-'''
 
 
-'''
 # ========== 7. 滚动预测未来 24 小时 ==========
 
 # 使用测试集最后一个样本的序列作为输入
@@ -363,4 +357,6 @@ plt.grid(True)
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
-'''
+
+print("Done!")
+
