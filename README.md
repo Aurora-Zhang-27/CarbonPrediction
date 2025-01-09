@@ -122,11 +122,11 @@ and it will automatically generate a file. You should put it in the folder where
 ### 5.5 Multi-step Forecasting with [CarbonPrediction_PJM(US)_(alpha)](src/CarbonPrediction_PJM(US)_(alpha).py)
 To enable multi-step forecasting (e.g., predicting the next 24 hours or more):
 1. For mode changing:  
-```python
-# ========== Mode Selection: Single-step or Multi-step ==========
-IS_MULTISTEP = True   # True => Multi-step output, False => Single-step output
-OUTPUT_WINDOW = 24    # Number of steps to predict in multi-step mode
-```  
+   ```python
+   # ========== Mode Selection: Single-step or Multi-step ==========
+   IS_MULTISTEP = True   # True => Multi-step output, False => Single-step output
+   OUTPUT_WINDOW = 24    # Number of steps to predict in multi-step mode
+   ```  
 2. Modify the `OUTPUT_WINDOW` parameter in the code (default: 24).
 3. Use the rolling forecast functionality to generate predictions for the next desired time frame:
    ```python
