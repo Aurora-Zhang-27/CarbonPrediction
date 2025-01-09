@@ -8,9 +8,9 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 from tensorflow.keras.callbacks import EarlyStopping
 
 # 1. Load the energy, weather, and historical carbon emission data
-energy_data_path = '/Users/mac/Desktop/CAISO2/PJM 5 minute standardized data_2024-09-30T00_00_00-04_00_2024-10-30T23_59_59.999000-04_00.csv'
-weather_data_path = '/Users/mac/Desktop/CAISO2/new york 2024-09-30 to 2024-10-30.csv'
-historical_emissions_path = '/Users/mac/Desktop/CAISO2/new_hourly_emission_rates.csv'
+energy_data_path = './data/PJM 5 minute standardized data_2024-09-30T00_00_00-04_00_2024-10-30T23_59_59.999000-04_00.csv'
+weather_data_path = './data/new york 2024-09-30 to 2024-10-30.csv'
+historical_emissions_path = './data/new_hourly_emission_rates.csv'
 
 energy_data = pd.read_csv(energy_data_path)
 weather_data = pd.read_csv(weather_data_path)
