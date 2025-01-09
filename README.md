@@ -4,7 +4,7 @@ A Python-based Long Short-Term Memory (LSTM) model system, which is capable of a
 Version: 1.2.0  
 Authors: Yin Zhang
 ### Highlights in Version 1.2.0
-- Enhanced **multi-step forecasting** for predicting up to 48 hours of carbon emissions.
+- Enhanced **multi-step forecasting**.
 - Improved **model flexibility**, supporting advanced LSTM and GRU architectures.
 - Optimized **data preprocessing**, enabling dynamic feature selection and robust scaling.
 
@@ -41,7 +41,9 @@ Finally, apply Unit Conversion Formula to get the accurate data with correct uni
 
 ### 3.2 Usage  
 The [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) program provides data loading, cleaning and calculation functions for calculating total carbon emissions from different energy combinations.  
+
 The [CarbonPrediction](src) program use combines LSTM, GRU and CNN network architectures for time series prediction tasks based on historical carbon emissions and weather data. By predicting carbon emissions for the next 24 hours, the code supports real-time monitoring and forecasting of regional carbon emissions.  
+
 The [Unit Conversion and Summation Calculator](src/Unit%20Conversion%20and%20Summation%20Calculator.py) program can change the historical carbon emission data from [PJM](https://dataminer2.pjm.com/feed/hourly_emission_rates.) into correct form and unit.
 
 
@@ -54,13 +56,13 @@ Other required packages:
 - Required python modules are listed in `requirements.txt`.  
   Run `pip install -U -r requirements.txt` for installing the dependencies.
 
-### 4.2 Running CarbonPrediction 1 using saved data:
+### 4.2 Running CarbonPrediction_CA(US) using saved data:
 The saved data in [CA(US)](data/CA(US)) needs to be inputed into the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py).  
 From the example, the inputed data should be [Energy data](data/CA(US)/CAISO%205%20minute%20standardized%20data_2024-09-30T00_00_00-07_00_2024-10-30T23_59_59.999000-07_00.csv), and the outputed data should be [Energy + Emission combined data](data/CA(US)/combined_energy_data_with_emissions.csv).  
 You can directly download the data using the link before. No need to modify the contents of the document.  
 After getting the output, input it to the [CarbonPrediction_CA(US)](src/CarbonPrediction_CA(US).py) to get the result and the image of the prediction line.
 
-### 4.3 Running CarbonPrediction 2 using saved data:  
+### 4.3 Running CarbonPrediction_PJM(US) using saved data:  
 The saved data in [PJM(US)](data/PJM(US)) which are [Energy data](data/PJM(US)/PJM%205%20minute%20standardized%20data_2024-09-30T00_00_00-04_00_2024-10-30T23_59_59.999000-04_00.csv), [Weather data](data/PJM(US)/new%20york%202024-09-30%20to%202024-10-30.csv), [Processed historical carbon emissions data](data/PJM(US)/new_hourly_emission_rates.csv) needs to be inputed into the [CarbonPrediction_PJM(US)](src/CarbonPrediction_PJM(US).py) directly, and you can have the result.  
 Note that if you want to use the [Unprocessed historical carbon emissions data](data/PJM(US)/hourly_emission_rates.csv) you should first input it into [Unit Conversion and Summation Calculator](src/Unit%20Conversion%20and%20Summation%20Calculator.py) which you can change the data into correct form and unit. Then, repeat the above.
 
