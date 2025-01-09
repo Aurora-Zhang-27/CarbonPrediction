@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Replace with your file path
-file_path = '/Users/mac/Desktop/CAISO2/hourly_emission_rates.csv'
+file_path = './data/hourly_emission_rates.csv'
 
 # Load the data
 historical_emissions = pd.read_csv(file_path)
@@ -21,6 +21,6 @@ hourly_total_emissions['total_hourly_emission_co2'] = hourly_total_emissions['to
 hourly_total_emissions.rename(columns={'datetime_beginning_utc': 'datetime_utc', 'total_hourly_emission_co2': 'total_hourly_emission_co2_kg'}, inplace=True)
 
 # Save to a new file if needed
-output_path = '/Users/mac/Desktop/CAISO2/new_hourly_total_emissions.csv'
+output_path = './data/new_hourly_total_emissions.csv'
 hourly_total_emissions.to_csv(output_path, index=False)
 print(f"Hourly total emissions saved to {output_path}")
