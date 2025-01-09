@@ -119,10 +119,16 @@ output_path = '/Users/mac/Desktop/CAISO2/new_hourly_total_emissions.csv'
 ```
 and it will automatically generate a file. You should put it in the folder where the origin file is located. This is your available carbon emissions data. Input it to [CarbonPrediction_PJM(US)](src/CarbonPrediction_PJM(US).py) with your energy and weather data, you will get the result.  
 
-### 5.5 Multi-step Forecasting with CarbonPrediction
+### 5.5 Multi-step Forecasting with [CarbonPrediction_PJM(US)_(alpha)](src/CarbonPrediction_PJM(US)_(alpha).py)
 To enable multi-step forecasting (e.g., predicting the next 24 hours or more):
-1. Modify the `OUTPUT_WINDOW` parameter in the code (default: 24).
-2. Use the rolling forecast functionality to generate predictions for the next desired time frame:
+1. For mode changing:  
+```python
+# ========== Mode Selection: Single-step or Multi-step ==========
+IS_MULTISTEP = True   # True => Multi-step output, False => Single-step output
+OUTPUT_WINDOW = 24    # Number of steps to predict in multi-step mode
+```  
+2. Modify the `OUTPUT_WINDOW` parameter in the code (default: 24).
+3. Use the rolling forecast functionality to generate predictions for the next desired time frame:
    ```python
    forecast_list = []
    for _ in range(OUTPUT_WINDOW):
