@@ -41,7 +41,7 @@ Finally, apply Unit Conversion Formula to get the accurate data with correct uni
 
 ### 3.2 Usage  
 The [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) program provides data loading, cleaning and calculation functions for calculating total carbon emissions from different energy combinations.  
-The [CarbonPrediction](src/CarbonPrediction%201.py) program use combines LSTM, GRU and CNN network architectures for time series prediction tasks based on historical carbon emissions and weather data. By predicting carbon emissions for the next 24 hours, the code supports real-time monitoring and forecasting of regional carbon emissions.  
+The [CarbonPrediction](src) program use combines LSTM, GRU and CNN network architectures for time series prediction tasks based on historical carbon emissions and weather data. By predicting carbon emissions for the next 24 hours, the code supports real-time monitoring and forecasting of regional carbon emissions.  
 The [Unit Conversion and Summation Calculator](src/Unit%20Conversion%20and%20Summation%20Calculator.py) program can change the historical carbon emission data from [PJM](https://dataminer2.pjm.com/feed/hourly_emission_rates.) into correct form and unit.
 
 
@@ -58,7 +58,7 @@ Other required packages:
 The saved data in [CA(US)](data/CA(US)) needs to be inputed into the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py).  
 From the example, the inputed data should be [Energy data](data/CA(US)/CAISO%205%20minute%20standardized%20data_2024-09-30T00_00_00-07_00_2024-10-30T23_59_59.999000-07_00.csv), and the outputed data should be [Energy + Emission combined data](data/CA(US)/combined_energy_data_with_emissions.csv).  
 You can directly download the data using the link before. No need to modify the contents of the document.  
-After getting the output, input it to the [CarbonPrediction 1](src/CarbonPrediction%201.py) to get the result and the image of the prediction line.
+After getting the output, input it to the [CarbonPrediction_CA(US)](src/CarbonPrediction_CA(US).py) to get the result and the image of the prediction line.
 
 ### 4.3 Running CarbonPrediction 2 using saved data:  
 The saved data in [PJM(US)](data/PJM(US)) which are [Energy data](data/PJM(US)/PJM%205%20minute%20standardized%20data_2024-09-30T00_00_00-04_00_2024-10-30T23_59_59.999000-04_00.csv), [Weather data](data/PJM(US)/new%20york%202024-09-30%20to%202024-10-30.csv), [Processed historical carbon emissions data](data/PJM(US)/new_hourly_emission_rates.csv) needs to be inputed into the [CarbonPrediction 2](src/CarbonPrediction%202.py) directly, and you can have the result.  
@@ -71,20 +71,20 @@ You can download any weather data you want from the Internet. Then, make sure th
 ### 5.2 Calculating Carbon Emission corresopnding to energy data       
 After having two data files, make sure that they are csv files and each column corresponds to a different energy and weather type. Next, open [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) and change the path of the code at line92 to match the path of your energy data file. Note that, you should make sure that all of the files have to be in one floder.  
 ### 5.3 Getting carbon emission forecasts using CarbonPrediction  
-Input the new csv file which outputed from the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) to [CarbonPrediction](src/CarbonPrediction%201.py) by changing file path in line10, and input your own weather data by changing the path in line 11.  
+Input the new csv file which outputed from the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) to [CarbonPrediction_CA(US)](src/CarbonPrediction_CA(US).py) by changing file path in line10, and input your own weather data by changing the path in line 11.  
 If you need data which is more than 24 hours, you can change the sequence_length in ine 42. Note that the larger the sequence_length, the lower the precision rate afterward.  
 
-[CarbonPrediction 2 (alpha)](src/CarbonPrediction_2_(alpha).py) allows customization of model architecture:
+[CarbonPrediction_PJM(US)_(alpha)](src/CarbonPrediction_PJM(US)_(alpha).py) allows customization of model architecture:
 1. **Number of Layers:** You can adjust the depth of the LSTM or GRU network by modifying the `n_layers` parameter.  
 2. **Units per Layer:** Increase the number of neurons with the `rnn_units` parameter for better long-term dependencies.  
 3. **Prediction Length:** Update the `sequence_length` for input length and `OUTPUT_WINDOW` for output prediction length.  
 
 ### 5.4 If you are able to collect the historical carbon emission data  
-No need to use the calculator. Please Note that the interval between each row of data of carbon emission should be an hour as well. Then, since you don't have to use the calculator, you should use [CarbonPrediction 2](src/CarbonPrediction%202.py) to make prediction.  
+No need to use the calculator. Please Note that the interval between each row of data of carbon emission should be an hour as well. Then, since you don't have to use the calculator, you should use [CarbonPrediction_PJM(US)](src/CarbonPrediction_PJM(US).py) to make prediction.  
 In the code, you should replace the file paths at line15 to line17. Also, you may have to change the datatime name to your own datatime name of your files in line20 to line22. 
 ### Note：  
 If your data comes from [PJM](https://www.pjm.com/)(recommand) or has different types of energy carbon emissions at one point in time like [hourly_emission_rates.csv](data/PJM(US)/hourly_emission_rates.csv), and you need to sum them before you can continue, [Unit Conversion and Summation Calculator](src/Unit%20Conversion%20and%20Summation%20Calculator.py) can help you.  
-Replace your file name on line4 and it will automatically generate a file called `new_hourly_total_emissions.csv` in the folder where the file is located. This is your available carbon emissions data. Input it to [CarbonPrediction 2](src/CarbonPrediction%202.py) with your energy and weather data, you will get the result.  
+Replace your file name on line4 and it will automatically generate a file called `new_hourly_total_emissions.csv` in the folder where the file is located. This is your available carbon emissions data. Input it to [CarbonPrediction_PJM(US)](src/CarbonPrediction_PJM(US).py) with your energy and weather data, you will get the result.  
 
 ### 5.5 Multi-step Forecasting with CarbonPrediction
 To enable multi-step forecasting (e.g., predicting the next 24 hours or more):
