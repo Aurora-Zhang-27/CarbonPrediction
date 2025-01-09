@@ -78,8 +78,14 @@ output_file_path = '/Users/mac/Desktop/CAISO/combined_energy_data_with_emissions
 ```
  Note that, you should make sure that all of the files have to be in one floder.  
 ### 5.3 Getting carbon emission forecasts using CarbonPrediction  
-Input the new csv file which outputed from the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) to [CarbonPrediction_CA(US)](src/CarbonPrediction_CA(US).py) by changing file path in line10, and input your own weather data by changing the path in line 11.  
-If you need data which is more than 24 hours, you can change the sequence_length in ine 42. Note that the larger the sequence_length, the lower the precision rate afterward.  
+Input the new csv file which outputed from the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) to [CarbonPrediction_CA(US)](src/CarbonPrediction_CA(US).py) by changing file path here:
+```python
+# Load data
+energy_data_path = 'combined_energy_data_with_emissions.csv'
+weather_data_path = 'weather_data_of_california 2024-09-30 to 2024-10-30.csv'
+```  
+and input your own weather data by changing the path in line 11.  
+If you need data which is more than 24 hours, you can change the `sequence_length`. Note that the larger the sequence_length, the lower the precision rate afterward.  
 
 [CarbonPrediction_PJM(US)_(alpha)](src/CarbonPrediction_PJM(US)_(alpha).py) allows customization of model architecture:
 1. **Number of Layers:** You can adjust the depth of the LSTM or GRU network by modifying the `n_layers` parameter.  
@@ -88,10 +94,30 @@ If you need data which is more than 24 hours, you can change the sequence_length
 
 ### 5.4 If you are able to collect the historical carbon emission data  
 No need to use the calculator. Please Note that the interval between each row of data of carbon emission should be an hour as well. Then, since you don't have to use the calculator, you should use [CarbonPrediction_PJM(US)](src/CarbonPrediction_PJM(US).py) to make prediction.  
-In the code, you should replace the file paths at line15 to line17. Also, you may have to change the datatime name to your own datatime name of your files in line20 to line22. 
+In the code, you should replace the file paths here:
+```python
+# 1. Load the energy, weather, and historical carbon emission data
+energy_data_path = '/Users/mac/Desktop/CAISO2/PJM 5 minute standardized data_2024-09-30T00_00_00-04_00_2024-10-30T23_59_59.999000-04_00.csv'
+weather_data_path = '/Users/mac/Desktop/CAISO2/new york 2024-09-30 to 2024-10-30.csv'
+historical_emissions_path = '/Users/mac/Desktop/CAISO2/new_hourly_emission_rates.csv'
+```
+Also, you may have to change the datatime name to your own datatime name of your files here:
+```python
+# 2. Preprocess data
+energy_data['datetime'] = pd.to_datetime(energy_data['interval_start_utc']).dt.tz_localize(None)
+weather_data['datetime'] = pd.to_datetime(weather_data['datetime']).dt.tz_localize(None)
+historical_emissions['datetime'] = pd.to_datetime(historical_emissions['datetime_utc']).dt.tz_localize(None)
+```
+As for [CarbonPrediction_PJM(US)_(alpha)](src/CarbonPrediction_PJM(US)_(alpha).py), the operation is the same.  
+
 ### Note：  
 If your data comes from [PJM](https://www.pjm.com/)(recommand) or has different types of energy carbon emissions at one point in time like [hourly_emission_rates.csv](data/PJM(US)/hourly_emission_rates.csv), and you need to sum them before you can continue, [Unit Conversion and Summation Calculator](src/Unit%20Conversion%20and%20Summation%20Calculator.py) can help you.  
-Replace your file name on line4 and it will automatically generate a file called `new_hourly_total_emissions.csv` in the folder where the file is located. This is your available carbon emissions data. Input it to [CarbonPrediction_PJM(US)](src/CarbonPrediction_PJM(US).py) with your energy and weather data, you will get the result.  
+Replace your file name here:
+```python
+file_path = '/Users/mac/Desktop/CAISO2/hourly_emission_rates.csv'
+output_path = '/Users/mac/Desktop/CAISO2/new_hourly_total_emissions.csv'
+```
+and it will automatically generate a file. You should put it in the folder where the origin file is located. This is your available carbon emissions data. Input it to [CarbonPrediction_PJM(US)](src/CarbonPrediction_PJM(US).py) with your energy and weather data, you will get the result.  
 
 ### 5.5 Multi-step Forecasting with CarbonPrediction
 To enable multi-step forecasting (e.g., predicting the next 24 hours or more):
