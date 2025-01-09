@@ -9,9 +9,9 @@ IS_MULTISTEP = True   # True => Multi-step output, False => Single-step output
 OUTPUT_WINDOW = 24    # Number of steps to predict in multi-step mode
 
 # 0. Read and merge data (Assuming energy_data, weather_data, emission_data have been time-aligned)
-energy_data = pd.read_csv('/Users/mac/Desktop/CAISO2/data/PJM 5 minute standardized data_2023-05-01T00_00_00-04_00_2024-10-31T23_59_59.999000-04_00.csv')
-weather_data = pd.read_csv('/Users/mac/Desktop/CAISO2/data/new york 2022-11-01 to 2024-10-31.csv')
-emission_data = pd.read_csv('/Users/mac/Desktop/CAISO2/data/new_hourly_emission_rates.csv')
+energy_data = pd.read_csv('./data/PJM 5 minute standardized data_2023-05-01T00_00_00-04_00_2024-10-31T23_59_59.999000-04_00.csv')
+weather_data = pd.read_csv('./data/new york 2022-11-01 to 2024-10-31.csv')
+emission_data = pd.read_csv('./data/new_hourly_emission_rates.csv')
 
 # Unify the time column and convert to datetime
 energy_data['datetime'] = pd.to_datetime(energy_data['interval_start_utc']).dt.tz_localize(None)
