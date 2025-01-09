@@ -3,7 +3,8 @@ A Python-based Long Short-Term Memory (LSTM) model system, which is capable of a
 
 Version: 1.2.0  
 Authors: Yin Zhang
-### Highlights in Version 1.2.0
+### Highlights in Version 1.2.0  
+NEW [CarbonPrediction_PJM(US)_(alpha)](src/CarbonPrediction_PJM(US)_(alpha).py)  
 - Enhanced **multi-step forecasting**.
 - Improved **model flexibility**, supporting advanced LSTM and GRU architectures.
 - Optimized **data preprocessing**, enabling dynamic feature selection and robust scaling.
