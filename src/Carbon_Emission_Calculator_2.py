@@ -89,8 +89,8 @@ def runCarbonIntensityCalculation(file_path, output_path, isLifecycle=True):
     return dataset
 
 # document path
-input_file_path = '/Users/mac/Desktop/CAISO/CAISO 5 minute standardized data_2024-07-15T00_00_00-07_00_2024-07-29T23_59_59.999000-07_00.csv'
-output_file_path = '/Users/mac/Desktop/CAISO/combined_energy_data_with_emissions.csv'
+input_file_path = './data/CAISO 5 minute standardized data_2024-07-15T00_00_00-07_00_2024-07-29T23_59_59.999000-07_00.csv'
+output_file_path = './data/combined_energy_data_with_emissions.csv'
 
 result_dataset = runCarbonIntensityCalculation(input_file_path, output_file_path, isLifecycle=True)
 
