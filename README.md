@@ -50,7 +50,7 @@ The [Unit Conversion and Summation Calculator](src/Unit%20Conversion%20and%20Sum
 ## 4. Run Carbon Emission Calculator and CarbonPrediction with existing datasets and models
 ### 4.1 Installing dependencies
 
-Carbon Emission Calculator requires Python3.  
+[Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) requires Python3.  
 Other required packages:
 
 - Required python modules are listed in `requirements.txt`.  
@@ -71,7 +71,12 @@ To run CarbonPrediction from scratch (with new data/for new regions etc.), first
 ### 5.1 Getting weather/energy data     
 You can download any weather data you want from the Internet. Then, make sure that the interval between each row of data is one hour. Similarly, Repeat the above for your own energy data. 
 ### 5.2 Calculating Carbon Emission corresopnding to energy data       
-After having two data files, make sure that they are csv files and each column corresponds to a different energy and weather type. Next, open [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) and change the path of the code at line92 to match the path of your energy data file. Note that, you should make sure that all of the files have to be in one floder.  
+After having two data files, make sure that they are csv files and each column corresponds to a different energy and weather type. Next, open [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) and change the path of the code here:
+```python
+input_file_path = '/Users/mac/Desktop/CAISO/CAISO 5 minute standardized data_2024-07-15T00_00_00-07_00_2024-07-29T23_59_59.999000-07_00.csv'
+output_file_path = '/Users/mac/Desktop/CAISO/combined_energy_data_with_emissions.csv'
+```
+ Note that, you should make sure that all of the files have to be in one floder.  
 ### 5.3 Getting carbon emission forecasts using CarbonPrediction  
 Input the new csv file which outputed from the [Carbon Emission Calculator](src/Carbon_Emission_Calculator_2.py) to [CarbonPrediction_CA(US)](src/CarbonPrediction_CA(US).py) by changing file path in line10, and input your own weather data by changing the path in line 11.  
 If you need data which is more than 24 hours, you can change the sequence_length in ine 42. Note that the larger the sequence_length, the lower the precision rate afterward.  
