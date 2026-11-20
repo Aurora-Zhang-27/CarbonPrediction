@@ -1,3 +1,5 @@
+> **Note:** This is an early-stage carbon forecasting project. My current work on this topic is in [fuelmix-carbon-intensity-forecasting](https://github.com/Aurora-Zhang-27/fuelmix-carbon-intensity-forecasting).
+
 # CarbonPrediction
 
 CarbonPrediction is an early machine-learning project for short-term carbon-emissions forecasting with recurrent neural networks.
